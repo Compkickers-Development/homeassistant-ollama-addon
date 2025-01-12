@@ -15,3 +15,27 @@ To integrate with the default [Ollama](https://www.home-assistant.io/integration
 ## Note
 
 By default the container runs with CPU acceleration only. If you are interesting in getting GPU support, please check the [Website of the Ollama Container Image](https://hub.docker.com/r/ollama/ollama).
+
+## Enabling NVIDIA GPU Support
+
+To enable NVIDIA GPU support, ensure that the following device mappings are included in the `ollama/config.yaml` file:
+
+```yaml
+devices:
+  - /dev/nvidia0:/dev/nvidia0
+  - /dev/nvidiactl:/dev/nvidiactl
+  - /dev/nvidia-uvm:/dev/nvidia-uvm
+  - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+```
+
+## Enabling AMD GPU Support
+
+To enable AMD GPU support, ensure that the following device mappings are included in the `ollama/config.yaml` file:
+
+```yaml
+devices:
+  - /dev/kfd:/dev/kfd
+  - /dev/dri:/dev/dri
+```
+
+Additionally, you need to install the ROCm and AMDGPU-PRO drivers for AMD GPU support.
