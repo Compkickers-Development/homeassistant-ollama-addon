@@ -22,10 +22,10 @@ To enable NVIDIA GPU support, ensure that the following device mappings are incl
 
 ```yaml
 devices:
-  - /dev/nvidia0:/dev/nvidia0
-  - /dev/nvidiactl:/dev/nvidiactl
-  - /dev/nvidia-uvm:/dev/nvidia-uvm
-  - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+  - /dev/nvidia0
+  - /dev/nvidiactl
+  - /dev/nvidia-uvm
+  - /dev/nvidia-uvm-tools
 ```
 
 ## Enabling AMD GPU Support
@@ -34,8 +34,8 @@ To enable AMD GPU support, ensure that the following device mappings are include
 
 ```yaml
 devices:
-  - /dev/kfd:/dev/kfd
-  - /dev/dri:/dev/dri
+  - /dev/kfd
+  - /dev/dri
 ```
 
 Additionally, you need to install the ROCm and AMDGPU-PRO drivers for AMD GPU support.
