@@ -25,12 +25,7 @@ ports_description:
 startup: application
 watchdog: tcp://[HOST]:[PORT:11434]
 devices:
-  - /dev/kfd:/dev/kfd
-  - /dev/dri:/dev/dri
-  # Commenting out potentially problematic device lines
-  # - /dev/nvidia0:/dev/nvidia0
-  # - /dev/nvidiactl:/dev/nvidiactl
-  # - /dev/nvidia-uvm:/dev/nvidia-uvm
-  # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+  - /dev/kfd
+  - /dev/dri
 volumes:
   - ollama:/root/.ollama
