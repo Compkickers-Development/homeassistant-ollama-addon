@@ -13,7 +13,7 @@ environment:
   OLLAMA_KEEP_ALIVE: "-1"
 map:
   - config:rw
-image: docker.io/ollama/ollama:rocm
+image: 'docker.io/ollama/ollama:rocm'
 init: false
 ingress: true
 ingress_port: 11434
